@@ -6,10 +6,11 @@ class UsersController < ApplicationController
 
     def create
         user = User.new(user_params)
+        # byebug
         if user.save
             session[:user_id] = user.id
             render json: {
-                status: created,
+                status: :create,
                 user: user
             }
         else
@@ -19,6 +20,6 @@ class UsersController < ApplicationController
 
     private
     def user_params
-        params.require(:user).permit(:first_name, :last_name, :email, :password, :about, :image)
+        params.permit(:first_name, :last_name, :email, :password, :about, :image)
     end
 end

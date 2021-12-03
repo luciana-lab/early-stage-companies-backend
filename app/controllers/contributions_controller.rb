@@ -7,6 +7,7 @@ class ContributionsController < ApplicationController
     def create
         contribution = Contribution.new(contribution_params)
         contribution.user_id = @current_user.id
+        # byebug
         if contribution.save
             render json: contribution
         else
@@ -16,6 +17,6 @@ class ContributionsController < ApplicationController
 
     private
     def contribution_params
-        params.permit(:content)
+        params.permit(:content, :company_id)
     end
 end

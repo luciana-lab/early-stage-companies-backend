@@ -10,7 +10,7 @@ class ContributionsController < ApplicationController
         if contribution.save
             render json: contribution
         else
-            render json: { error: company.errors.full_messages }, status: 422
+            render json: { error: contribution.errors.full_messages }, status: 422
         end
     end
 

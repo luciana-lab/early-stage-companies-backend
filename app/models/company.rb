@@ -1,6 +1,6 @@
 class Company < ApplicationRecord
   belongs_to :user
-  has_many :contributions
+  has_many :contributions, :dependent => :destroy
 
   validates :name, :industry, :description, :need_category, :need, presence: true
 end

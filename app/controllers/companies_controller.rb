@@ -18,7 +18,7 @@ class CompaniesController < ApplicationController
 
     def update
         company = Company.find_by_id(params[:id])
-        if compay.update(company_params)
+        if company.update(company_params)
             render json: company
         else
             render json: { error: company.errors.full_messages }, status: 422
@@ -28,7 +28,9 @@ class CompaniesController < ApplicationController
     def destroy
         company = Company.find_by(params[:id])
         company.destroy
-        render json: { result: ok }
+        # byebug
+        # render json: { result: ok }
+        render json: company.id
     end
 
     private

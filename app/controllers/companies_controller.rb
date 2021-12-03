@@ -5,11 +5,6 @@ class CompaniesController < ApplicationController
         render json: companies
     end
 
-    def show
-        company = Company.find_by_id(params[:id])
-        render json: company
-    end
-
     def create
         company = Company.new(company_params)
         company.user_id = @current_user.id

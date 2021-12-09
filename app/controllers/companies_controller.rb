@@ -10,23 +10,24 @@ class CompaniesController < ApplicationController
         company.user_id = @current_user.id
         # byebug
         if company.save
-            render json: company
+            render json: company, include:['user,contributions.user']
         else
             render json: { error: company.errors.full_messages }, status: 422
         end
     end
 
     def update
-        company = Company.find_by_id(params[:id])
+        company = Company.find(params[:id])
+        # byebug
         if company.update(company_params)
-            render json: company
+            render json: company, include:['user,contributions.user']
         else
             render json: { error: company.errors.full_messages }, status: 422
         end
     end
 
     def destroy
-        company = Company.find_by(params[:id])
+        company = Company.find(params[:id])
         company.destroy
         # byebug
         # render json: { result: ok }

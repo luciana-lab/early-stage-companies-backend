@@ -15,6 +15,12 @@ class ContributionsController < ApplicationController
         end
     end
 
+    def destroy
+        contribution = Contribution.find(params[:id])
+        contribution.destroy
+        render json: contribution.id
+    end
+
     private
     def contribution_params
         params.permit(:content, :company_id)

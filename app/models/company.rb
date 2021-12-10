@@ -3,5 +3,5 @@ class Company < ApplicationRecord
   has_many :contributions, :dependent => :destroy
   # accepts_nested_attributes_for :contributions
 
-  validates :name, :industry, :description, :need_category, :need, presence: true
+  validates :name, :description, :need, presence: true
 end

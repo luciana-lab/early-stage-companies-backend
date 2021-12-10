@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2021_12_01_141923) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "companies", force: :cascade do |t|
     t.string "name"
     t.string "industry"
@@ -22,7 +25,7 @@ ActiveRecord::Schema.define(version: 2021_12_01_141923) do
     t.string "location"
     t.string "need_category"
     t.string "need"
-    t.integer "user_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_companies_on_user_id"
@@ -30,8 +33,8 @@ ActiveRecord::Schema.define(version: 2021_12_01_141923) do
 
   create_table "contributions", force: :cascade do |t|
     t.text "content"
-    t.integer "company_id", null: false
-    t.integer "user_id", null: false
+    t.bigint "company_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["company_id"], name: "index_contributions_on_company_id"

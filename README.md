@@ -40,12 +40,12 @@ Users, Companies, and Contributions.
 This application is a has_many/belongs_to relationship.\
 A user had many companies and has many contributions.\
 A company has many contributions and belongs to a user.\
-A contribution belongs to a company and belongs to a user.\
+A contribution belongs to a company and belongs to a user.
 
 *Attributes*\
 A user has first name, last name, email, password, about, and image.\
 A company has name, industry, description, image, website, video, need category, and need.\
-A contribution has content.\
+A contribution has content.
 
 [Flow diagram](https://drive.google.com/file/d/1evKyGhqsBa7Cxc_P0qdZnGUnjlXYOjLq/view?usp=sharing)
 ## Instalation
@@ -72,7 +72,7 @@ Start the server:
 ```
 ## Usage
 
-To see the API data go to your local web server.
+To see the API data go to the localhost:3000 web server.
 
 [Companies API](http://localhost:3000/companies)\
 [Users API](http://localhost:3000/users)\
@@ -88,11 +88,11 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in this project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/luciana-lab/realtor_level_quiz_backend/blob/main/CODE_OF_CONDUCT.md).
+Everyone interacting in this project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/luciana-lab/early-stage-companies-backend/blob/main/CODE_OF_CONDUCT.md).
 
 ## Extras
 [Live Project Page]()\
-[Project Walkthrough Video]()\
+[Project Walkthrough Video](https://youtu.be/xnsyZ4juSmg)\
 [Blog Post - Part I](https://luciana-lab.medium.com/rails-react-redux-thunk-user-auth-with-cookies-and-sessions-part-i-98c5ea19a8c7)\
 [Blog Post - Part II](https://luciana-lab.medium.com/rails-react-redux-thunk-user-auth-with-cookies-and-sessions-part-ii-e3f9bf036489)\
 [30 minutes video coding](https://youtu.be/aBAqAHF81WY)

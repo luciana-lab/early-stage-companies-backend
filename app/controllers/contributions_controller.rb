@@ -15,6 +15,15 @@ class ContributionsController < ApplicationController
         end
     end
 
+    def update
+        contribution = Contribution.find(params[:id])
+        if contribution.update(contribution_params)
+            render json: contribution
+        else
+            render json: { error: contribution.errors.full_messages }, status: 422
+        end
+    end
+
     def destroy
         contribution = Contribution.find(params[:id])
         contribution.destroy

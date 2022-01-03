@@ -48,7 +48,7 @@ A company has name, industry, description, image, website, video, need category,
 A contribution has content.
 
 [Flow diagram](https://drive.google.com/file/d/1evKyGhqsBa7Cxc_P0qdZnGUnjlXYOjLq/view?usp=sharing)
-## Instalation
+## Installation
 Fork and clone this repo.
 
 Install all the gems with:
@@ -91,6 +91,10 @@ The gem is available as open source under the terms of the [MIT License](https:/
 Everyone interacting in this project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/luciana-lab/early-stage-companies-backend/blob/main/CODE_OF_CONDUCT.md).
 
 ## Extras
+[Live Project Heroku](https://one-million-cups-dripper.herokuapp.com/)\
+[Companies API Heroku](https://one-million-cups-dripper-api.herokuapp.com/companies)\
+[Users API Heroku](https://one-million-cups-dripper-api.herokuapp.com/users)\
+[Contributions API Heroku](https://one-million-cups-dripper-api.herokuapp.com/contributions)\
 [Project Walkthrough Video](https://youtu.be/xnsyZ4juSmg)\
 [Blog Post - Part I](https://luciana-lab.medium.com/rails-react-redux-thunk-user-auth-with-cookies-and-sessions-part-i-98c5ea19a8c7)\
 [Blog Post - Part II](https://luciana-lab.medium.com/rails-react-redux-thunk-user-auth-with-cookies-and-sessions-part-ii-e3f9bf036489)\

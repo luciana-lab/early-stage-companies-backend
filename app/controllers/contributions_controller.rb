@@ -6,8 +6,8 @@ class ContributionsController < ApplicationController
 
     def create
         contribution = Contribution.new(contribution_params)
-        contribution.user_id = @current_user.id
         # byebug
+        contribution.user_id = @current_user.id
         if contribution.save
             render json: contribution
         else

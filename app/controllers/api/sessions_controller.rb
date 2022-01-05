@@ -1,5 +1,4 @@
 class Api::SessionsController < ApplicationController
-
     def create
         user = User.find_by(email: params[:email])
 
@@ -16,7 +15,6 @@ class Api::SessionsController < ApplicationController
     end
 
     def logged_in
-        # byebug
         if @current_user
             render json: {
                 logged_in: true,

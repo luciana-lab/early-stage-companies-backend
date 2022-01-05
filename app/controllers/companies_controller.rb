@@ -8,7 +8,6 @@ class CompaniesController < ApplicationController
     def create
         company = Company.new(company_params)
         company.user_id = @current_user.id
-        # byebug
         if company.save
             render json: company, include:['user,contributions.user']
         else

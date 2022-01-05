@@ -1,0 +1,208 @@
+* {
+    box-sizing: border-box;
+}
+  
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    background: #f1f1f1;
+    margin: 0;
+}
+
+/* Create two unequal columns that floats next to each other */
+
+/* BOTH SIDES */
+
+/* White Background */
+.left-card,
+.right-card-drip,
+.right-card-about-me,
+.right-card-contributions {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.company-row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* hr */
+.company-leftcolumn .left-card hr,
+.company-rightcolumn .right-card-drip hr,
+.company-rightcolumn .right-card-about-me hr,
+.company-rightcolumn .right-card-contributions hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+.company-leftcolumn .left-card #company-industry,
+.company-rightcolumn .right-card-drip #company-help-category {
+    font-size: 15px;
+}
+
+/* LEFT COLUMN */
+.company-leftcolumn {   
+    float: left;
+    width: 75%;
+}
+
+.company-leftcolumn .left-card #company-name-h2 {
+    color: black;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.company-video-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+}
+  
+.company-video-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.company-leftcolumn .left-card #company-description {
+    text-align: justify;
+}
+
+#company-edit-btn {
+    padding: 12.8px 20px;
+    margin: 8px 30px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.9;
+    background-color: #38447e;
+    color: white;
+    text-decoration: none;
+    letter-spacing: .02rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+#company-delete-btn {
+    padding: 12.8px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    opacity: 0.9;
+    background-color: #d12b1f;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: .02rem;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+#contributions-btn button:hover,
+#company-edit-btn:hover,
+#company-delete-btn:hover {
+    opacity: 1;
+}
+
+  
+/* RIGHT COLUMN */
+.company-rightcolumn {
+    float: left;
+    width: 25%;
+    background-color: #f1f1f1;
+    padding-left: 20px;
+}
+
+/* RIGHT SIDE - DRIP PROJECT */
+#contributions-length #contributions-number-h2,
+#contributions-length #contributions-number-p1,
+#contributions-length #contributions-number-p2 {
+    display: inline;
+}
+
+#contributions-length {
+    text-align: center;
+}
+
+#contributions-btn #add-contribution-btn {
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    background-color: #fe5e1d;
+    color: white;
+    font-weight: bold;
+    letter-spacing: .02rem;
+    text-transform: uppercase;
+}
+
+/* RIGHT COLUMN - ABOUT ME */
+.company-rightcolumn .right-card-about-me {
+    text-align: center;
+    color: black;
+}
+
+/* RIGHT COLUMN - About Me - User avatar */
+.company-user-avatar {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.company-rightcolumn .right-card-about-me #company-user-owner-name #company-user-owner-first-name,
+.company-rightcolumn .right-card-about-me #company-user-owner-name #company-user-owner-last-name {
+    display: inline-block;
+    padding: 3px;
+    text-transform: uppercase;
+    color: black;
+}
+
+/* RIGHT COLUMN - Contributions Content */
+.companies-contributions-content #companies-contribution-name-p, 
+.companies-contributions-content #contribution-delete-btn {
+    display: inline-block;
+    padding: 1px;
+    margin-top: -15px;
+}
+
+.companies-contributions-content #companies-contribution-name-p {
+    margin-right: 3px;
+    margin-top: 3%;
+    word-break: break-all;
+    overflow: hidden;
+}
+
+.companies-contributions-content #contribution-content-p {
+    margin-top: -8%;
+}
+
+.companies-contributions-content #contribution-delete-btn {
+    cursor: pointer;
+    transform: translate(0%, -200%);
+    background-color: transparent;
+    border: none;
+}
+
+.companies-contributions-content #contribution-delete-btn:hover {
+    opacity: 1;
+    background: whitesmoke;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+    .company-leftcolumn, .company-rightcolumn {   
+      width: 100%;
+      padding: 0;
+    }
+}

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   namespace :api do
+  # scope module: :api do
     resources :contributions, only: [:index, :create, :update, :destroy]
     resources :companies, only: [:index, :create, :update, :destroy]
     resources :users, only: [:index, :create]

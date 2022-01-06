@@ -2,7 +2,7 @@ import { ADD_COMPANY, DELETE_COMPANY, EDIT_COMPANY, GET_COMPANIES } from "../con
 
 export function fetchCompanies() {
     return dispatch => {
-        fetch('/companies')
+        fetch("/api/companies")
             .then(resp => {
                 return resp.json()
             })
@@ -13,7 +13,7 @@ export function fetchCompanies() {
 
 export function addCompany(company) {
     return dispatch => {
-        fetch('/companies', {
+        fetch("/api/companies", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -29,7 +29,7 @@ export function addCompany(company) {
 
 export function editCompany(company) {
     return dispatch => {
-        fetch(`/companies/${company.id}`, {
+        fetch(`/api/companies/${company.id}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json",
@@ -45,7 +45,7 @@ export function editCompany(company) {
 
 export function removeCompany(company) {
     return dispatch => {
-        fetch(`/companies/${company.id}`, {
+        fetch(`/api/companies/${company.id}`, {
             method: "DELETE"
         })
             .then(resp => resp.json())

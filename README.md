@@ -1,5 +1,5 @@
 # Early Stage Companies Contributions
-This is the backend of the application that contains database, models, and controllers. Please, also install the [React Redux frontend](https://github.com/luciana-lab/early-stage-companies-frontend) and follow the installation instruction.
+This is the backend of the application that contains database, models, and controllers. The frontend is also merged on this repo inside the <code>client</code> folder.
 
 This application was developed to help summarize the information and needs of companies/startups in their early stage beyond capital needs. It is inspired on [1 Million Cups](https://www.1millioncups.com/).\
 1 Million Cups organized a meeting every Wednesday over 163 cities in the U.S. and 2 projects are pitched in every meeting. The community gives support, feedback, and people can help them with the project needs.\
@@ -8,6 +8,8 @@ Usage:
 2. After fill up the form, the project will show up on "all projects" page and will have it own page;
 3. All the project information will be displayed on the individual project page where anyone (who is logged in) can add a contribution with the need asked for.
 4. The person who wrote the contribution and the project owner are the only ones who can see the contribution content and delete it. The project owner can also edit or delete the project.
+
+![til](./public/gif.gif)
 
 **User Perspective**
 
@@ -70,13 +72,6 @@ Start the server:
 ```
     $ rails s
 ```
-## Usage
-
-To see the API data go to the localhost:3000 web server.
-
-[Companies API](http://localhost:3000/companies)\
-[Users API](http://localhost:3000/users)\
-[Contributions API](http://localhost:3000/contributions)
 ## Contributing
 
 This project is intended to be a safe and welcoming space for collaboration.
